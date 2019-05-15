@@ -16,6 +16,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".UploadActivity"></activity>
         <activity android:name=".FeedActivity" />
+        <activity android:name=".SignUp2"></activity>
         <activity android:name=".SignUpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

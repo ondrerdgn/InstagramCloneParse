@@ -27,12 +27,12 @@ public class SignUpActivity extends AppCompatActivity {
 
         // beni hatırla
 
-        ParseUser parseUser = ParseUser.getCurrentUser();
+        /*ParseUser parseUser = ParseUser.getCurrentUser();
 
         if (parseUser != null){
             Intent intent = new Intent(getApplicationContext(), FeedActivity.class);
             startActivity(intent);
-        }
+        }*/
 
     }
 
@@ -57,24 +57,9 @@ public class SignUpActivity extends AppCompatActivity {
 
     public void signUp(View view){
 
-        ParseUser user = new ParseUser();
-        user.setUsername(usernameText.getText().toString());
-        user.setPassword(passwordText.getText().toString());
+        Intent intent = new Intent(getApplicationContext(), SignUp2.class);
+        startActivity(intent);
 
-        user.signUpInBackground(new SignUpCallback() {
-            @Override
-            public void done(ParseException e) {
-                if (e != null){
-                    Toast.makeText(SignUpActivity.this, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-                }else{
 
-                    Toast.makeText(SignUpActivity.this, "User Created", Toast.LENGTH_SHORT).show();
-
-                    Intent intent = new Intent(getApplicationContext(), FeedActivity.class);
-                    startActivity(intent);
-
-                }
-            }
-        });
     }
 }
