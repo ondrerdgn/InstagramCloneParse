@@ -36,7 +36,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-    public  void signIn(View view){
+    public void signIn(View view){
 
         ParseUser.logInInBackground(usernameText.getText().toString(), passwordText.getText().toString(), new LogInCallback() {
             @Override
@@ -53,8 +53,6 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     public void signUp(View view){
